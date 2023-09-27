@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLBanSach" Class="dbSachOnlineDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LAPTOP-04JNFEO5\NXTSQL;Initial Catalog=QLBanSach;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLBanSachConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CHUDE" Member="CHUDEs">
+    <Type Name="CHUDE">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sach" Member="Saches">
+    <Type Name="Sach">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NameAuthor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NgayCapNhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AnhBia" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhaXuatBan" Member="NhaXuatBans">
+    <Type Name="NhaXuatBan">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
