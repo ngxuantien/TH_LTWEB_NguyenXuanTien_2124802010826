@@ -1,0 +1,10 @@
+﻿@model IEnumerable<TH_LTWeb.Models.NhaXuatBan>
+<ul class="list-group">
+    <li class="list-group-item-active" style="font-weight: bold; text-align: center; background-color: dodgerblue; padding: 10px">SÁCH THEO NHÀ XUẤT BẢN</li>
+    @foreach(var item in Model)
+            {
+                <a href="@Url.Action("SachTheoNhaXuatBan", "SachOnline", new { id = item.Id})" class="list-group-item">
+                    @item.Name
+                </a>
+            }
+</ul>

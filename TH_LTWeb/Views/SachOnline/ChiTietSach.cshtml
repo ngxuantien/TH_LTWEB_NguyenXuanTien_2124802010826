@@ -1,0 +1,29 @@
+﻿@model  TH_LTWeb.Models.Sach
+@{
+    ViewBag.Title = "ChiTietSach";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2 style="text-align: center; color: cadetblue">CHI TIẾT SÁCH</h2>
+<div class="thumbnail">
+    <h4 class="tensach" style="text-align:center; color: orangered">
+        @Model.Name
+    </h4>
+    <img src="~/Images/@Model.AnhBia" alt="@Model.Name" />
+    <div class="motasach" style="padding-top: 20px;">
+        <p>
+            @Html.Raw(Model.MoTa.ToString().Replace("\n", "</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp"))
+        </p>
+    </div>
+
+    <p class="ngaycapnhat" style="padding-left: 750px;"> Ngày cập nhật: @Html.FormatValue(Model.NgayCapNhat, "{0:dd/MM/yyyy}")</p>
+    <p class="giaban" style="padding-left: 760px;">Giá bán: <span> @Html.FormatValue(Model.Price, "{0:#,##0}") VNĐ</span></p>
+    <p class="addtocart" style="padding-left: 770px;">
+        <a href="@Url.Action("AddToCart","ShoppingCart") new {id = @Model.Id}"
+           class="btn btn-primary" role="button">
+            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add To Cart
+        </a>
+    </p>
+
+</div>
+
