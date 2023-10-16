@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
 
-<h2 class="text-center">SachTheoNhaXuatBan</h2>
+<h2 class="text-center">SÁCH THEO NHÀ XUẤT BẢN</h2>
 <div class="row text-center">
     @foreach (var sach in Model)
     {
@@ -14,7 +14,7 @@
                      class="img-responsive img-rounded imgbook" />
                 <div class="caption">
                     <h4 style="min-height: 70px;">
-                        <a href="@Url.Action("ChiTietSach","SachOnline", new { id = sach.Id})">
+                        <a href="@Url.Action("ThemGioHang", "GioHang", new { ms = sach.Id, url = Request.Url.ToString() })">
                             @sach.Name
                         </a>
                     </h4>

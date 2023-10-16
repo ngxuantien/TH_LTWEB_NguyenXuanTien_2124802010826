@@ -26,12 +26,6 @@
         <elementListCompartment Id="699668bc-8e6a-4554-a46f-47216ddc37a5" absoluteBounds="3.6399999999999997, 2.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="2d3da050-5dfb-4b7a-b976-a47681ee3106" absoluteBounds="6, 0.625, 2, 2.3478011067708335">
-      <DataClassMoniker Name="/dbSachOnlineDataContext/KHACHHANG" />
-      <nestedChildShapes>
-        <elementListCompartment Id="60ba626a-157b-447b-8319-964785b9f895" absoluteBounds="6.015, 1.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="e48d002b-4dc6-469c-a90f-d7306654f1be" absoluteBounds="0.5, 0.625, 2, 2.1554996744791666">
       <DataClassMoniker Name="/dbSachOnlineDataContext/Sach" />
       <nestedChildShapes>
@@ -42,6 +36,12 @@
       <DataClassMoniker Name="/dbSachOnlineDataContext/ChiTietSach" />
       <nestedChildShapes>
         <elementListCompartment Id="ddfc61f8-0f34-4f8c-b097-75df8aadacd9" absoluteBounds="3.2649999999999997, 4.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c05b3907-a390-4d68-8dd5-f567d0518ecd" absoluteBounds="6.125, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/dbSachOnlineDataContext/KHACHHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f72a3389-e6ba-4d9c-9fce-642ecdbe7eca" absoluteBounds="6.14, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

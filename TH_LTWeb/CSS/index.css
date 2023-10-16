@@ -1,0 +1,119 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.header{
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #AEC3AE;
+    background-color: black;
+}
+ul.header_menu_list{
+    display: flex;
+    font-family: 'Merriweather', serif;
+}
+
+ul.header_menu_list .item{
+    margin: 20px;
+    position: relative;
+    display: block;
+    transition: 0.5s;
+    cursor: pointer;
+    color: white;
+}
+
+li:hover{
+    color: red;
+}
+
+.header_search_logo img{
+    height: 25px;
+    padding-left: 10px;
+}
+.header_search_logo{
+    display: flex;
+    padding: 10px;
+    background-color: #d0e7d293;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.header_seach{
+    margin-right: 20px;
+}
+.header_search_logo  input{
+    width: 300px;
+    outline: none;
+    border: none;
+}
+
+.header_shopping_cart{
+    display: flex;
+}
+.header_shopping_cart img{
+    height: 35px;
+    padding: 10px;
+    align-items: center;
+}
+
+.section_logo img{
+    width: 90%;
+}
+.section_logo{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_shopping_cart img{
+    cursor: pointer;
+}
+
+/*chan trang*/
+footer{
+    width: calc(100%-60px);
+    height: 200px;
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-top: 1px solid #B0D9B1;
+}
+.infor{
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+.contact .list_contact .item img{
+    width: 25px;
+    padding-right: 5px;
+    display: flex;
+}
+.delivery .list_delivery .item img{
+    width: 25px;
+}
+.list_Pay_up .item img{
+    width: 30px;
+    padding-right: 5px;
+}
+.list_contact li{
+    display: flex;
+    margin: 5px;
+}
+.Copyright{
+    float: left;
+    padding-top: 5px;
+}
+.contact .list_contact .item{
+    align-items: center;
+    cursor: pointer;
+}
+.Pay_up .list_Pay_up .item{
+    align-items: center;
+    cursor: pointer;
+}

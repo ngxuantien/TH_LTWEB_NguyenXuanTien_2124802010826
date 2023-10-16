@@ -70,6 +70,7 @@ namespace TH_LTWeb.Controllers
             }
             else
             {
+                kh.MaKH = 1;
                 kh.HoTen = sHoTen;
                 kh.TaiKhoan = sTenDN;
                 kh.MatKhau = sMatKhau;

@@ -19,11 +19,11 @@
     <p class="ngaycapnhat" style="padding-left: 750px;"> Ngày cập nhật: @Html.FormatValue(Model.NgayCapNhat, "{0:dd/MM/yyyy}")</p>
     <p class="giaban" style="padding-left: 760px;">Giá bán: <span> @Html.FormatValue(Model.Price, "{0:#,##0}") VNĐ</span></p>
     <p class="addtocart" style="padding-left: 770px;">
-        <a href="@Url.Action("AddToCart","ShoppingCart") new {id = @Model.Id}"
+        <a href="@Url.Action("ThemGioHang", "GioHang", new { ms = Model.Id, url = Request.Url.ToString() })"
            class="btn btn-primary" role="button">
             <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add To Cart
         </a>
     </p>
-
+    
 </div>
 
