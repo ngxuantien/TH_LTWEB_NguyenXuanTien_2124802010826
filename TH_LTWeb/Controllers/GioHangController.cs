@@ -107,6 +107,54 @@ namespace TH_LTWeb.Controllers
             return RedirectToAction("Index", "SachOnline");
         }
 
+        [HttpGet]
+        public ActionResult DatHang()
+        {
+            if(Session["TaiKhoan"] == null || Session["TaiKhoan"].ToString() == "")
+            {
+                return RedirectToAction("DangNhap", "User");
+            }
+            if (Session["GioHang"] == null)
+            {
+                return RedirectToAction("Index", "SachOnline");
+            }
+            List<GioHang> lstGioHang = LayGioHang();
+            ViewBag.TongSoLuong = TongSoLuong();
+            ViewBag.TongTien = TongTien();
+            return View(lstGioHang);
+        }
+
+        [HttpPost]
+        public ActionResult DatHang(FormCollection f)
+        {
+            DONDATHANG1 ddh = new DONDATHANG1();
+            KHACHHANG kh = (KHACHHANG)Session["TaiKhoan"];
+            List<GioHang> lstGioHang = LayGioHang();
+            ddh.MaKH = kh.MaKH;
+            ddh.NgayDat = DateTime.Now;
+            var NgayGiao = String.Format("{0:MM/dd/yyyy}", f["NgayGiao"]);
+            ddh.NgayGiao = DateTime.Parse(NgayGiao);
+            ddh.TinhTrangGiaoHang = true;
+            ddh.TinhTrangThanhToan = false;
+            db.DONDATHANG1s.InsertOnSubmit(ddh);
+            db.SubmitChanges();
+            foreach (var item in lstGioHang)
+            {
+                CTDONHANG ctdh = new CTDONHANG();
+                ctdh.MaDonHang = (long)ddh.MaDonHang;
+                ctdh.MaSach = item.iMaSach;
+                ctdh.SoLuong = item.iSoLuong;
+                ctdh.DonGia = (double?)(decimal)item.dDonGia;
+                db.CTDONHANGs.InsertOnSubmit(ctdh);
+            }
+            db.SubmitChanges();
+            Session["GioHang"] = null;
+            return RedirectToAction("XacNhanDonHang", "GioHang");
+        }
+        public ActionResult XacNhanDonHang()
+        {
+            return View();
+        }
         // GET: GioHang
         public ActionResult Index()
         {

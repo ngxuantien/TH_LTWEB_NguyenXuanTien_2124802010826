@@ -44,5 +44,17 @@
         <elementListCompartment Id="f72a3389-e6ba-4d9c-9fce-642ecdbe7eca" absoluteBounds="6.14, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="0cd0337b-c238-41b9-ac2c-495aabb70e3a" absoluteBounds="0.5, 4.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbSachOnlineDataContext/CTDONHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd8458cc-e570-4654-9be9-704d8a5548f7" absoluteBounds="0.51500000000000012, 5.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c86caed-a76a-4450-96bf-d3a2e5ffd636" absoluteBounds="6.625, 5.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/dbSachOnlineDataContext/DONDATHANG1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f61ce8b3-beb6-4cb1-8fab-916452384bd2" absoluteBounds="6.64, 5.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>
