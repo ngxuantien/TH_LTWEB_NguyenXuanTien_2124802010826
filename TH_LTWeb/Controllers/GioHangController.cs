@@ -144,7 +144,7 @@ namespace TH_LTWeb.Controllers
                 ctdh.MaDonHang = (long)ddh.MaDonHang;
                 ctdh.MaSach = item.iMaSach;
                 ctdh.SoLuong = item.iSoLuong;
-                ctdh.DonGia = (double?)(decimal)item.dDonGia;
+                ctdh.DonGia = (decimal)item.dDonGia;
                 db.CTDONHANGs.InsertOnSubmit(ctdh);
             }
             db.SubmitChanges();

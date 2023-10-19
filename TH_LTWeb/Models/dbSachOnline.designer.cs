@@ -51,9 +51,6 @@ namespace TH_LTWeb.Models
     partial void InsertKHACHHANG(KHACHHANG instance);
     partial void UpdateKHACHHANG(KHACHHANG instance);
     partial void DeleteKHACHHANG(KHACHHANG instance);
-    partial void InsertDONDATHANG1(DONDATHANG1 instance);
-    partial void UpdateDONDATHANG1(DONDATHANG1 instance);
-    partial void DeleteDONDATHANG1(DONDATHANG1 instance);
     #endregion
 		
 		public dbSachOnlineDataContext() : 
@@ -1179,7 +1176,7 @@ namespace TH_LTWeb.Models
 		
 		private System.Nullable<int> _SoLuong;
 		
-		private System.Nullable<double> _DonGia;
+		private System.Nullable<decimal> _DonGia;
 		
 		public CTDONHANG()
 		{
@@ -1233,8 +1230,8 @@ namespace TH_LTWeb.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DonGia", DbType="Float")]
-		public System.Nullable<double> DonGia
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DonGia", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> DonGia
 		{
 			get
 			{
@@ -1251,12 +1248,10 @@ namespace TH_LTWeb.Models
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DONDATHANG1")]
-	public partial class DONDATHANG1 : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class DONDATHANG1
 	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private long _MaDonHang;
+		private System.Nullable<long> _MaDonHang;
 		
 		private System.Nullable<long> _MaKH;
 		
@@ -1268,31 +1263,12 @@ namespace TH_LTWeb.Models
 		
 		private System.Nullable<bool> _TinhTrangThanhToan;
 		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaDonHangChanging(long value);
-    partial void OnMaDonHangChanged();
-    partial void OnMaKHChanging(System.Nullable<long> value);
-    partial void OnMaKHChanged();
-    partial void OnNgayDatChanging(System.Nullable<System.DateTime> value);
-    partial void OnNgayDatChanged();
-    partial void OnNgayGiaoChanging(System.Nullable<System.DateTime> value);
-    partial void OnNgayGiaoChanged();
-    partial void OnTinhTrangGiaoHangChanging(System.Nullable<bool> value);
-    partial void OnTinhTrangGiaoHangChanged();
-    partial void OnTinhTrangThanhToanChanging(System.Nullable<bool> value);
-    partial void OnTinhTrangThanhToanChanged();
-    #endregion
-		
 		public DONDATHANG1()
 		{
-			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaDonHang", DbType="BigInt NOT NULL", IsPrimaryKey=true)]
-		public long MaDonHang
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaDonHang", DbType="BigInt")]
+		public System.Nullable<long> MaDonHang
 		{
 			get
 			{
@@ -1302,11 +1278,7 @@ namespace TH_LTWeb.Models
 			{
 				if ((this._MaDonHang != value))
 				{
-					this.OnMaDonHangChanging(value);
-					this.SendPropertyChanging();
 					this._MaDonHang = value;
-					this.SendPropertyChanged("MaDonHang");
-					this.OnMaDonHangChanged();
 				}
 			}
 		}
@@ -1322,11 +1294,7 @@ namespace TH_LTWeb.Models
 			{
 				if ((this._MaKH != value))
 				{
-					this.OnMaKHChanging(value);
-					this.SendPropertyChanging();
 					this._MaKH = value;
-					this.SendPropertyChanged("MaKH");
-					this.OnMaKHChanged();
 				}
 			}
 		}
@@ -1342,11 +1310,7 @@ namespace TH_LTWeb.Models
 			{
 				if ((this._NgayDat != value))
 				{
-					this.OnNgayDatChanging(value);
-					this.SendPropertyChanging();
 					this._NgayDat = value;
-					this.SendPropertyChanged("NgayDat");
-					this.OnNgayDatChanged();
 				}
 			}
 		}
@@ -1362,11 +1326,7 @@ namespace TH_LTWeb.Models
 			{
 				if ((this._NgayGiao != value))
 				{
-					this.OnNgayGiaoChanging(value);
-					this.SendPropertyChanging();
 					this._NgayGiao = value;
-					this.SendPropertyChanged("NgayGiao");
-					this.OnNgayGiaoChanged();
 				}
 			}
 		}
@@ -1382,11 +1342,7 @@ namespace TH_LTWeb.Models
 			{
 				if ((this._TinhTrangGiaoHang != value))
 				{
-					this.OnTinhTrangGiaoHangChanging(value);
-					this.SendPropertyChanging();
 					this._TinhTrangGiaoHang = value;
-					this.SendPropertyChanged("TinhTrangGiaoHang");
-					this.OnTinhTrangGiaoHangChanged();
 				}
 			}
 		}
@@ -1402,32 +1358,8 @@ namespace TH_LTWeb.Models
 			{
 				if ((this._TinhTrangThanhToan != value))
 				{
-					this.OnTinhTrangThanhToanChanging(value);
-					this.SendPropertyChanging();
 					this._TinhTrangThanhToan = value;
-					this.SendPropertyChanged("TinhTrangThanhToan");
-					this.OnTinhTrangThanhToanChanged();
 				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
